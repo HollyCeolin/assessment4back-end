@@ -25,10 +25,8 @@ fortuneB.addEventListener('click', getFortune)
 document.querySelector(".submit").addEventListener("submit", (e) => {
     e.preventDefault();
     let new_name = document.querySelector(".submit-input").value;
-    let new_toy = document.querySelector(".Favorite").value;
     let dog_info = {
-        dog_name : new_name,
-        favorite_toy: new_toy
+        dog_name : new_name
     }
     axios.post("http://www.localhost:4050/api/dogs", dog_info)
     .then(res => {
